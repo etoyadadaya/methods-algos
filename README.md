@@ -1,1 +1,1 @@
-# algos-prep
+# Own implementation of methods and algorithms
