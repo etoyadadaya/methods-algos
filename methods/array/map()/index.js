@@ -1,7 +1,9 @@
+// https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 // arr.map((el, index, array) => ...);
+
 let arr = [1,2,3];
 
-function myMap (callback) {
+Array.prototype.myMap = function(callback) {
   if (!Array.isArray(this)) return;
   let tmp  = [];
 
@@ -10,7 +12,5 @@ function myMap (callback) {
   }
   return tmp;
 }
-
-Array.prototype.myMap = myMap;
 
 arr.myMap((el, index, array) => console.log([el, index], array));
